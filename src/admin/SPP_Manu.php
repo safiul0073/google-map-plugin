@@ -12,14 +12,14 @@ class SPP_Manu extends BaseController {
     function __construct()
     {
         $this->callbacks = new AdminCallback();
-        $this->page       = array(
+        $this->page      = array(
                         "page_title"    => 'SPP page',
                         "menu_title"    => 'SPP',
                         "capability"    => 'manage_options',
                         "menu_slug"     => "spp_custom_page",
                         "callback"      => array($this->callbacks, 'adminDashboard'),
                         "icon_url"      => 'dashicons-welcome-widgets-menus',
-                        "position"      => 90
+                        "position"      => 110
                     );
     }
 

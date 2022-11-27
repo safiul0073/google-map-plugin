@@ -11,10 +11,10 @@ class SPP_GoogleMap extends BaseController{
     }
 
     public function enqueueScript () {
-        $api_key = esc_attr(get_option( 'google_map_api_key' ));
+        // $api_key = esc_attr(get_option( 'google_map_api_key' ));
 
-        wp_register_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key='.$api_key.'&v=weekly' , array(), '', true);
-        wp_enqueue_script( $this->pluginName(), $this->getPluginUrl() . 'js/google-map.js', array( 'jquery', 'googlemaps' ), $this->version(), true );
+        // wp_register_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key='.$api_key.'&v=weekly' , array(), '', true);
+        // wp_enqueue_script( $this->pluginName(), $this->getPluginUrl() . 'js/google-map.js', array( 'jquery', 'googlemaps' ), $this->version(), true );
     }
 
     function shortCode( ) {

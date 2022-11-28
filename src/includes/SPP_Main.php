@@ -19,6 +19,7 @@ class SPP_Main {
         $this->loadDependencis();
         $this->loadAdminHook();
         $this->loadPublicHook();
+        
     }
 
     function loadDependencis () {
@@ -36,8 +37,7 @@ class SPP_Main {
     function loadPublicHook () {
         add_shortcode( 'show_google_map', array($this->public_setting, 'shortCode') );
 		$this->loader->addAction( 'wp_enqueue_style', $this->public_setting, 'enqueueStyle' );
-		$this->loader->addAction( 'wp_enqueue_scripts', $this->public_setting, 'enqueueScript' );
-
+        $this->loader->addAction( 'wp_enqueue_scripts', $this->public_setting, 'enqueueScript' );
     }
 
     function getLoader () {
